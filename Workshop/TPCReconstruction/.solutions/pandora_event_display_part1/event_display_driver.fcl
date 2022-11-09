@@ -1,0 +1,14 @@
+#include "standard_reco1reco2_sbnd.fcl"
+
+process_name: EventDisplay
+
+# Use our custom settings file
+physics.producers.pandora.ConfigFile: "MyPandoraSettings_Master_Standard.xml"
+
+# Only run pandora
+physics.eventDisplay: [ pandora ]
+physics.trigger_paths: [ eventDisplay ]
+
+# Don't produce any output ART root files
+physics.end_paths: []
+
